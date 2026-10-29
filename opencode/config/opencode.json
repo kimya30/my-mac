@@ -1,0 +1,61 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/deepseek-v4.1-flash-free",
+  "mcp": {
+    "laravel-boost": {
+      "type": "local",
+      "command": [
+        "bash",
+        "-c",
+        "cd /Users/runner/h-dashboard && exec php artisan boost:mcp"
+      ],
+      "enabled": true,
+      "timeout": 30000
+    },
+    "codegraph": {
+      "type": "local",
+      "command": [
+        "codegraph",
+        "serve",
+        "--mcp"
+      ],
+      "enabled": true,
+      "timeout": 30000
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true,
+      "timeout": 30000
+    },
+    "github": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "environment": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "enabled": true,
+      "timeout": 120000
+    },
+    "codebase-memory-mcp": {
+      "type": "local",
+      "command": [
+        "/Users/runner/.local/bin/codebase-memory-mcp"
+      ],
+      "enabled": true,
+      "timeout": 60000
+    }
+  },
+  "plugin": [
+    "superpowers@git+https://github.com/obra/superpowers.git"
+  ],
+  "plugins": [
+    "superpowers@git+https://github.com/obra/superpowers.git",
+    "oh-my-opencode-slim"
+  ],
+  "autoupdate": false
+}

@@ -1,0 +1,44 @@
+{
+  "presets": {
+    "free": {
+      "orchestrator": {
+        "model": "opencode/deepseek-v4.1-flash-free"
+      },
+      "oracle": {
+        "model": "opencode/nemotron-3.5-lightning-free"
+      },
+      "explorer": {
+        "model": "opencode/glm-5.3-flash-free"
+      },
+      "fixer": {
+        "model": "opencode/deepseek-v4.1-flash-free"
+      },
+      "librarian": {
+        "model": "opencode/glm-5.3-flash-free"
+      },
+      "designer": {
+        "model": "opencode/beam-free"
+      },
+      "council": {
+        "model": "opencode/nemotron-3.5-lightning-free"
+      }
+    }
+  },
+  "council": {
+    "presets": {
+      "default": {
+        "nemotron": {
+          "model": "opencode/nemotron-3.5-lightning-free"
+        },
+        "deepseek": {
+          "model": "opencode/deepseek-v4.1-flash-free"
+        },
+        "glm": {
+          "model": "opencode/glm-5.3-flash-free"
+        }
+      }
+    },
+    "default_preset": "default"
+  },
+  "preset": "free"
+}
